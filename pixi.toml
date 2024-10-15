@@ -29,10 +29,10 @@ scipy = ">=1.14.1,<2"
 no-build-isolation = ["joblib", "threadpoolctl", "scikit-learn", "imbalanced-learn"]
 
 [feature.dev.pypi-dependencies]
-joblib = { path = "./src/joblib", editable = true }
-threadpoolctl = { path = "./src/threadpoolctl", editable = true }
-scikit-learn = { path = "./src/scikit-learn", editable = true }
-imbalanced-learn = { path = "./src/imbalanced-learn", editable = true }
+joblib = { path = "./src/joblib/joblib", editable = true }
+threadpoolctl = { path = "./src/threadpoolctl/threadpoolctl", editable = true }
+scikit-learn = { path = "./src/scikit-learn/scikit-learn", editable = true }
+imbalanced-learn = { path = "./src/imbalanced-learn/imbalanced-learn", editable = true }
 
 [feature.tests.dependencies]
 pytest = "*"
@@ -40,8 +40,10 @@ pytest-cov = "*"
 pytest-xdist = "*"
 
 [feature.tests.tasks]
-test-sklearn = { cmd = "pytest -vsl --pyargs sklearn", cwd = "./src/scikit-learn" }
-test-imblearn = { cmd = "pytest -vsl --pyargs imblearn", cwd = "./src/imbalanced-learn" }
+test-joblib = { cmd = "pytest -vsl --pyargs joblib", cwd = "./src/joblib/joblib" }
+test-threadpoolctl = { cmd = "pytest -vsl --pyargs threadpoolctl", cwd = "./src/threadpoolctl/threadpoolctl" }
+test-sklearn = { cmd = "pytest -vsl --pyargs sklearn", cwd = "./src/scikit-learn/scikit-learn" }
+test-imblearn = { cmd = "pytest -vsl --pyargs imblearn", cwd = "./src/imbalanced-learn/imbalanced-learn" }
 
 [environments]
 dev = ["dev", "tests"]
