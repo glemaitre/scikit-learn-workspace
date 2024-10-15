@@ -14,12 +14,19 @@ joblib = ">=1.2.0,<2"
 threadpoolctl = ">=3.1.0,<4"
 
 [feature.build.dependencies]
+compilers = ">=1.7.0,<2"
 cython = ">=3.0.10,<4"
 meson = ">=1.5.1,<2"
 meson-python = ">=0.16.0,<0.17"
 
+[feature.build.pypi-options]
+no-build-isolation = ["scikit-learn"]
+
 [feature.build.pypi-dependencies]
 scikit-learn = { path = "./scikit-learn", editable = true }
+
+[feature.build.tasks]
+clean = { cmd = "spin clean", cwd = "scikit-learn" }
 
 [feature.dev.dependencies]
 ipykernel = "*"
@@ -66,6 +73,7 @@ lint = { cmd = "pre-commit install && pre-commit run -v --all-files --show-diff-
 [feature.tests.dependencies]
 pytest = ">=7.1.2"
 pytest-cov = ">=2.9.0"
+pytest-xdist = ">=2.5.1"
 matplotlib = ">=3.3.4"
 scikit-image = ">=0.17.2"
 pandas = ">=1.1.5"
