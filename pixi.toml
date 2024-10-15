@@ -1,0 +1,47 @@
+[project]
+authors = ["Guillaume Lemaitre <guillaume@probabl.ai>"]
+channels = ["conda-forge"]
+description = "This is my pixi workspace to work on scikit-learn"
+name = "scikit-learn-workspace"
+platforms = ["linux-64", "osx-64", "osx-arm64"]
+version = "0.1.0.dev0"
+
+[tasks]
+update-joblib = { cmd = "git submodule update --init --recursive", cwd = "src/joblib/joblib" }
+update-threadpoolctl = { cmd = "git submodule update --init --recursive", cwd = "src/threadpoolctl/threadpoolctl" }
+update-sklearn = { cmd = "git submodule update --init --recursive", cwd = "src/scikit-learn/scikit-learn" }
+update-imblearn = { cmd = "git submodule update --init --recursive", cwd = "src/imbalanced-learn/imbalanced-learn" }
+update-all-submodules = { cmd = "echo 'Initializing all submodules'", depends-on = ["update-joblib", "update-threadpoolctl", "update-sklearn", "update-imblearn"] }
+
+[dependencies]
+python = ">=3.10.0,<4"
+flit = ">=3.9.0,<4"
+pip = ">=24.2,<25"
+cython = ">=3.0.10,<4"
+compilers = ">=1.7.0,<2"
+ninja = ">=1.12.1,<2"
+meson = ">=1.5.1,<2"
+meson-python = ">=0.16.0,<0.17"
+numpy = ">=2.1.2,<3"
+scipy = ">=1.14.1,<2"
+
+[feature.dev.pypi-options]
+no-build-isolation = ["joblib", "threadpoolctl", "scikit-learn", "imbalanced-learn"]
+
+[feature.dev.pypi-dependencies]
+joblib = { path = "./src/joblib", editable = true }
+threadpoolctl = { path = "./src/threadpoolctl", editable = true }
+scikit-learn = { path = "./src/scikit-learn", editable = true }
+imbalanced-learn = { path = "./src/imbalanced-learn", editable = true }
+
+[feature.tests.dependencies]
+pytest = "*"
+pytest-cov = "*"
+pytest-xdist = "*"
+
+[feature.tests.tasks]
+test-sklearn = { cmd = "pytest -vsl --pyargs sklearn", cwd = "./src/scikit-learn" }
+test-imblearn = { cmd = "pytest -vsl --pyargs imblearn", cwd = "./src/imbalanced-learn" }
+
+[environments]
+dev = ["dev", "tests"]
