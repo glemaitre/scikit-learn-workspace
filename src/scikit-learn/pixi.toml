@@ -25,6 +25,7 @@ scikit-learn = { path = "./scikit-learn", editable = true }
 ipykernel = "*"
 ipython = "*"
 jupyterlab = "*"
+spin = "*"
 
 [feature.dev.tasks]
 ipython = { cmd = "spin ipython", cwd = "scikit-learn" }
