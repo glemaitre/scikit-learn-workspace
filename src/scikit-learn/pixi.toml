@@ -34,6 +34,7 @@ ipykernel = "*"
 ipython = "*"
 jupyterlab = "*"
 spin = "*"
+towncrier = "*"
 
 [feature.dev.tasks]
 ipython = { cmd = "spin ipython", cwd = "scikit-learn" }
