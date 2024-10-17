@@ -36,6 +36,7 @@ jupyterlab = "*"
 spin = "*"
 towncrier = "*"
 array-api-compat = "*"
+array-api-strict = "*"
 
 [feature.dev.tasks]
 ipython = { cmd = "spin ipython", cwd = "scikit-learn" }
