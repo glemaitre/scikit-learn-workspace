@@ -82,5 +82,4 @@ tests = { cmd = "pytest -vsl --cov=imblearn --cov-report=xml", cwd = "imbalanced
 lint = ["lint"]
 docs = ["build", "docs"]
 dev = ["build", "dev", "docs", "optional", "keras", "lint", "tests"]
-nightly = ["build", "dev", "docs", "optional", "keras", "lint", "tests"]
 tests = ["build", "tests"]
