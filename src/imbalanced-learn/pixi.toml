@@ -24,6 +24,10 @@ no-build-isolation = ["imbalanced-learn"]
 imbalanced-learn = { path = "./imbalanced-learn", editable = true }
 
 [feature.dev.dependencies]
+compilers = ">=1.7.0,<2"
+cython = ">=3.0.10,<4"
+meson = ">=1.5.1,<2"
+meson-python = ">=0.16.0,<0.17"
 ipykernel = "*"
 ipython = "*"
 jupyterlab = "*"
@@ -78,4 +82,5 @@ tests = { cmd = "pytest -vsl --cov=imblearn --cov-report=xml", cwd = "imbalanced
 lint = ["lint"]
 docs = ["build", "docs"]
 dev = ["build", "dev", "docs", "optional", "keras", "lint", "tests"]
+nightly = ["build", "dev", "docs", "optional", "keras", "lint", "tests"]
 tests = ["build", "tests"]
