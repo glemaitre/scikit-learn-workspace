@@ -10,3 +10,6 @@
 [submodule "src/threadpoolctl/threadpoolctl"]
 	path = src/threadpoolctl/threadpoolctl
 	url = https://github.com/joblib/threadpoolctl.git
+[submodule "src/skrub/skrub"]
+	path = src/skrub/skrub
+	url = git@github.com:skrub-data/skrub.git
