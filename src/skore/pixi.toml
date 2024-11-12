@@ -58,7 +58,17 @@ sphinx-copybutton = "*"
 [feature.docs.tasks]
 docs = { cmd = "make html", cwd = "skore/sphinx" }
 
+[feature.lint.dependencies]
+black = "==24.3.0"
+ruff = "==0.5.1"
+cython-lint = "==0.15.0"
+pre-commit = "*"
+
+[feature.lint.tasks]
+lint = { cmd = "pre-commit install && pre-commit run -v --all-files --show-diff-on-failure" }
+
 [environments]
 tests = ["tests"]
 docs = ["docs"]
-dev = ["dev", "docs", "tests"]
+lint = ["lint"]
+dev = ["dev", "docs", "tests", "lint"]
