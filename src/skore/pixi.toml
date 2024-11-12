@@ -1,0 +1,53 @@
+[project]
+authors = ["skore developers <skore@signal.probabl.ai>"]
+channels = ["conda-forge"]
+description = "Tooling and assistance for data scientists to \"Own Your Data Science\""
+name = "skore"
+platforms = ["osx-arm64", "osx-64", "linux-aarch64", "linux-64", "win-64"]
+version = "0.1.0.dev0"
+
+[dependencies]
+python = ">=3.9,<4"
+diskcache = "*"
+fastapi = "*"
+plotly = ">=5,<6"
+rich = "*"
+skops = "*"
+uvicorn = "*"
+
+[pypi-dependencies]
+skore = { path = "./skore/skore", editable = true }
+
+[feature.tests.dependencies]
+altair = ">=5,<6"
+httpx = "*"
+matplotlib = "*"
+pandas = "*"
+pillow = "*"
+plotly = "*"
+pre-commit = "*"
+pytest = "*"
+pytest-cov = "*"
+pytest-order = "*"
+pytest-randomly = "*"
+ruff = "*"
+scikit-learn = "*"
+
+[feature.docs.dependencies]
+IPython = "*"
+altair = "*"
+matplotlib = "*"
+numpydoc = "*"
+pandas = "*"
+python-kaleido = "*"
+pydata-sphinx-theme = "*"
+scikit-learn = "*"
+sphinx = "*"
+sphinx-design = "*"
+sphinx-gallery = "*"
+sphinx-copybutton = "*"
+
+[environments]
+tests = ["tests"]
+docs = ["docs"]
+dev = ["docs", "tests"]

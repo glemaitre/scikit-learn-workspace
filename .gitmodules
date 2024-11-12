@@ -13,3 +13,6 @@
 [submodule "src/skrub/skrub"]
 	path = src/skrub/skrub
 	url = git@github.com:skrub-data/skrub.git
+[submodule "src/skore/skore"]
+	path = src/skore/skore
+	url = git@github.com:probabl-ai/skore.git
