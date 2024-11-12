@@ -65,7 +65,7 @@ cython-lint = "==0.15.0"
 pre-commit = "*"
 
 [feature.lint.tasks]
-lint = { cmd = "pre-commit install && pre-commit run -v --all-files --show-diff-on-failure" }
+lint = { cmd = "pre-commit install && pre-commit run -v --all-files --show-diff-on-failure", cwd = "skore" }
 
 [environments]
 tests = ["tests"]
