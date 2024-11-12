@@ -33,6 +33,9 @@ pytest-randomly = "*"
 ruff = "*"
 scikit-learn = "*"
 
+[feature.tests.tasks]
+tests = { cmd = "pytest -vsl --cov=skore --cov-report=xml", cwd = "skore/skore/tests" }
+
 [feature.docs.dependencies]
 IPython = "*"
 altair = "*"
@@ -46,6 +49,9 @@ sphinx = "*"
 sphinx-design = "*"
 sphinx-gallery = "*"
 sphinx-copybutton = "*"
+
+[feature.docs.tasks]
+docs = { cmd = "make html", cwd = "skore/sphinx" }
 
 [environments]
 tests = ["tests"]
