@@ -13,9 +13,13 @@ narwhals = ">=0.8.14"
 skrub = ">=0.1.0"
 polars = ">=0.20.26,<2"
 
+[feature.lint.dependencies]
+pre-commit = "*"
+
 [feature.tests.dependencies]
 pytest = "*"
 
 [environments]
+lint = ["lint"]
 tests = ["tests"]
-dev = ["tests"]
+dev = ["tests", "lint"]
