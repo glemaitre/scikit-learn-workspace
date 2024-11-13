@@ -16,3 +16,6 @@
 [submodule "src/skore/skore"]
 	path = src/skore/skore
 	url = git@github.com:probabl-ai/skore.git
+[submodule "src/scikit-playtime/scikit-playtime"]
+	path = src/scikit-playtime/scikit-playtime
+	url = git@github.com:koaning/scikit-playtime.git
