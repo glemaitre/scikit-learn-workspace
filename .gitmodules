@@ -10,6 +10,10 @@
 	path = src/threadpoolctl/threadpoolctl
 	url = https://github.com/joblib/threadpoolctl.git
 	ignore = all
+[submodule "src/joblib/joblib"]
+        path = src/joblib/joblib
+	url = https://github.com/joblib/joblib.git
+	ignore = all
 [submodule "src/skrub/skrub"]
 	path = src/skrub/skrub
 	url = git@github.com:skrub-data/skrub.git
