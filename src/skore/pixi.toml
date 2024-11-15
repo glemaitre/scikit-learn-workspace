@@ -18,6 +18,9 @@ uvicorn = "*"
 [pypi-dependencies]
 skore = { path = "./skore/skore", editable = true }
 
+[feature.build.dependencies]
+hatch = "*"
+
 [feature.dev.dependencies]
 ipykernel = "*"
 ipython = "*"
@@ -71,4 +74,4 @@ lint = { cmd = "pre-commit install && pre-commit run -v --all-files --show-diff-
 tests = ["tests"]
 docs = ["docs"]
 lint = ["lint"]
-dev = ["dev", "docs", "tests", "lint"]
+dev = ["build", "dev", "docs", "tests", "lint"]
