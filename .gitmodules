@@ -2,10 +2,6 @@
 	path = src/imbalanced-learn/imbalanced-learn
 	url = https://github.com/scikit-learn-contrib/imbalanced-learn.git
 	ignore = dirty
-[submodule "src/joblib/joblib"]
-	path = src/joblib/joblib
-	url = https://github.com/joblib/joblib.git
-	ignore = dirty
 [submodule "src/scikit-learn/scikit-learn"]
 	path = src/scikit-learn/scikit-learn
 	url = https://github.com/scikit-learn/scikit-learn.git
