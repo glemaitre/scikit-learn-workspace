@@ -1,24 +1,24 @@
 [submodule "src/imbalanced-learn/imbalanced-learn"]
 	path = src/imbalanced-learn/imbalanced-learn
 	url = https://github.com/scikit-learn-contrib/imbalanced-learn.git
-	ignore = dirty
+	ignore = all
 [submodule "src/scikit-learn/scikit-learn"]
 	path = src/scikit-learn/scikit-learn
 	url = https://github.com/scikit-learn/scikit-learn.git
-	ignore = dirty
+	ignore = all
 [submodule "src/threadpoolctl/threadpoolctl"]
 	path = src/threadpoolctl/threadpoolctl
 	url = https://github.com/joblib/threadpoolctl.git
-	ignore = dirty
+	ignore = all
 [submodule "src/skrub/skrub"]
 	path = src/skrub/skrub
 	url = git@github.com:skrub-data/skrub.git
-	ignore = dirty
+	ignore = all
 [submodule "src/skore/skore"]
 	path = src/skore/skore
 	url = git@github.com:probabl-ai/skore.git
-	ignore = dirty
+	ignore = all
 [submodule "src/scikit-playtime/scikit-playtime"]
 	path = src/scikit-playtime/scikit-playtime
 	url = git@github.com:koaning/scikit-playtime.git
-	ignore = dirty
+	ignore = all
