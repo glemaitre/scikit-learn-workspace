@@ -1,7 +1,3 @@
-[submodule "src/imbalanced-learn/imbalanced-learn"]
-	path = src/imbalanced-learn/imbalanced-learn
-	url = https://github.com/scikit-learn-contrib/imbalanced-learn.git
-	ignore = all
 [submodule "src/scikit-learn/scikit-learn"]
 	path = src/scikit-learn/scikit-learn
 	url = https://github.com/scikit-learn/scikit-learn.git
