@@ -11,4 +11,6 @@ update-submodule-joblib = { cmd = "git submodule update --init --recursive", cwd
 update-submodule-threadpoolctl = { cmd = "git submodule update --init --recursive", cwd = "src/threadpoolctl/threadpoolctl" }
 update-submodule-sklearn = { cmd = "git submodule update --init --recursive", cwd = "src/scikit-learn/scikit-learn" }
 update-submodule-imblearn = { cmd = "git submodule update --init --recursive", cwd = "src/imbalanced-learn" }
-update-all-submodules = { cmd = "echo 'Initializing all submodules'", depends-on = ["update-submodule-joblib", "update-submodule-threadpoolctl", "update-submodule-sklearn", "update-submodule-imblearn"] }
+update-submodule-skrub = { cmd = "git submodule update --init --recursive", cwd = "src/skrub" }
+update-submodule-sklearn-compat = { cmd = "git submodule update --init --recursive", cwd = "src/sklearn_compat" }
+update-all-submodules = { cmd = "echo 'Initializing all submodules'", depends-on = ["update-submodule-joblib", "update-submodule-threadpoolctl", "update-submodule-sklearn", "update-submodule-imblearn", "update-submodule-skrub", "update-submodule-sklearn-compat"] }

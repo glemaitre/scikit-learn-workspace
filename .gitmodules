@@ -21,3 +21,9 @@
 [submodule "src/imbalanced-learn"]
 	path = src/imbalanced-learn
 	url = git@github.com:scikit-learn-contrib/imbalanced-learn.git
+[submodule "src/skrub"]
+	path = src/skrub
+	url = git@github.com:skrub-data/skrub.git
+[submodule "src/sklearn_compat"]
+	path = src/sklearn_compat
+	url = git@github.com:glemaitre/sklearn_compat.git
