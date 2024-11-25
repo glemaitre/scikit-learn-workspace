@@ -10,10 +10,6 @@
         path = src/joblib/joblib
 	url = https://github.com/joblib/joblib.git
 	ignore = all
-[submodule "src/skrub/skrub"]
-	path = src/skrub/skrub
-	url = git@github.com:skrub-data/skrub.git
-	ignore = all
 [submodule "src/skore/skore"]
 	path = src/skore/skore
 	url = git@github.com:probabl-ai/skore.git
@@ -22,3 +18,6 @@
 	path = src/scikit-playtime/scikit-playtime
 	url = git@github.com:koaning/scikit-playtime.git
 	ignore = all
+[submodule "src/imbalanced-learn"]
+	path = src/imbalanced-learn
+	url = git@github.com:scikit-learn-contrib/imbalanced-learn.git
