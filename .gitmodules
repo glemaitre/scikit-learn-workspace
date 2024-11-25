@@ -19,3 +19,6 @@
 [submodule "src/skrub"]
 	path = src/skrub
 	url = git@github.com:skrub-data/skrub.git
+[submodule "src/sklearn-compat"]
+	path = src/sklearn-compat
+	url = git@github.com:glemaitre/sklearn-compat.git
