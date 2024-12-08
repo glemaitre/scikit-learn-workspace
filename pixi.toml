@@ -14,7 +14,8 @@ update-submodule-imblearn = { cmd = "git submodule update --init --recursive", c
 update-submodule-skrub = { cmd = "git submodule update --init --recursive", cwd = "src/skrub" }
 update-submodule-playtime = { cmd = "git submodule update --init --recursive", cwd = "src/scikit-playtime/scikit-playtime" }
 update-submodule-sklearn-compat = { cmd = "git submodule update --init --recursive", cwd = "src/sklearn_compat" }
-update-all-submodules = { cmd = "echo 'Initializing all submodules'", depends-on = ["update-submodule-joblib", "update-submodule-threadpoolctl", "update-submodule-sklearn", "update-submodule-imblearn", "update-submodule-skrub", "update-submodule-playtime", "update-submodule-sklearn-compat"] }
+update-submodule-lightgbm = { cmd = "git submodule update --init --recursive", cwd = "src/lightgbm" }
+update-all-submodules = { cmd = "echo 'Initializing all submodules'", depends-on = ["update-submodule-joblib", "update-submodule-threadpoolctl", "update-submodule-sklearn", "update-submodule-imblearn", "update-submodule-skrub", "update-submodule-playtime", "update-submodule-sklearn-compat", "update-submodule-lightgbm" ] }
 
 update-main-joblib = { cmd = "git checkout main && git pull", cwd = "src/joblib/joblib" }
 update-main-threadpoolctl = { cmd = "git checkout master && git pull", cwd = "src/threadpoolctl/threadpoolctl" }
@@ -23,4 +24,5 @@ update-main-imblearn = { cmd = "git checkout master && git pull", cwd = "src/imb
 update-main-playtime = { cmd = "git checkout main && git pull", cwd = "src/scikit-playtime/scikit-playtime" }
 update-main-skrub = { cmd = "git checkout main && git pull", cwd = "src/skrub" }
 update-main-sklearn-compat = { cmd = "git checkout main && git pull", cwd = "src/sklearn_compat" }
-update-main-all = { cmd = "echo 'Updating all main branches'", depends-on = ["update-main-joblib", "update-main-threadpoolctl", "update-main-sklearn", "update-main-imblearn", "update-main-playtime", "update-main-skrub", "update-main-sklearn-compat"] }
+update-main-lightgbm = { cmd = "git checkout master && git pull", cwd = "src/lightgbm" }
+update-main-all = { cmd = "echo 'Updating all main branches'", depends-on = ["update-main-joblib", "update-main-threadpoolctl", "update-main-sklearn", "update-main-imblearn", "update-main-playtime", "update-main-skrub", "update-main-sklearn-compat", "update-main-lightgbm"] }
