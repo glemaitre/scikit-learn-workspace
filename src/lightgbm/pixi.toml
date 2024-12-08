@@ -5,3 +5,32 @@ description = "LightGBM Python-package"
 name = "lightgbm"
 platforms = ["osx-arm64", "osx-64", "linux-aarch64", "linux-64", "win-64"]
 version = "4.5.0.99"
+
+[dependencies]
+numpy = ">=1.17.0"
+scipy = ">=1.10.0"
+scikit-learn = ">=0.24.2"
+pandas = ">=0.24.0"
+
+[feature.build.dependencies]
+compilers = ">=1.7.0,<2"
+cmake = "*"
+scikit-build-core = "*"
+ninja = "*"
+pip = "*"
+
+[feature.build.activation]
+scripts = ["build-lightgbm.sh"]
+
+[feature.build.pypi-options]
+no-build-isolation = ["lightgbm"]
+
+[feature.build.pypi-dependencies]
+lightgbm = { path = "./LightGBM/lightgbm-python", editable = true }
+
+[feature.build.tasks]
+build-lightgbm = { cmd = "cmake -B build -S . && cmake --build build -j8" }
+build-lightgbm-python = { cmd = "./build-python.sh", depends-on = ["build-lightgbm"] }
+
+[environments]
+dev = ["build"]
