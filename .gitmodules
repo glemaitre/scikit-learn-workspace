@@ -22,3 +22,6 @@
 [submodule "src/sklearn-compat"]
 	path = src/sklearn-compat
 	url = git@github.com:glemaitre/sklearn-compat.git
+[submodule "src/lightgbm/LightGBM"]
+	path = src/lightgbm/LightGBM
+	url = git@github.com:microsoft/LightGBM.git
