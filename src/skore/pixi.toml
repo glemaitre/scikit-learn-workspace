@@ -13,6 +13,7 @@ fastapi = "*"
 plotly = ">=5,<6"
 rich = "*"
 skops = "*"
+scikit-learn = "*"
 uvicorn = "*"
 
 [pypi-dependencies]
@@ -39,7 +40,7 @@ pytest-cov = "*"
 pytest-order = "*"
 pytest-randomly = "*"
 ruff = "*"
-scikit-learn = "*"
+skrub = "*"
 
 [feature.tests.tasks]
 tests = { cmd = "pytest -vsl --cov=skore --cov-report=xml", cwd = "skore/skore/tests" }
@@ -57,6 +58,8 @@ sphinx = "*"
 sphinx-design = "*"
 sphinx-gallery = "*"
 sphinx-copybutton = "*"
+sphinx-tabs = "*"
+skrub = "*"
 
 [feature.docs.tasks]
 docs = { cmd = "make html", cwd = "skore/sphinx" }
