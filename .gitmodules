@@ -22,3 +22,6 @@
 [submodule "src/lightgbm/LightGBM"]
 	path = src/lightgbm/LightGBM
 	url = git@github.com:microsoft/LightGBM.git
+[submodule "src/skore/skore"]
+	path = src/skore/skore
+	url = git@github.com:probabl-ai/skore.git
