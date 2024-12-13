@@ -12,6 +12,9 @@ scipy = ">=1.10.0"
 scikit-learn = ">=0.24.2"
 pandas = ">=0.24.0"
 
+[pypi-dependencies]
+sklearn-compat = "==0.1.0rc2"
+
 [feature.build.dependencies]
 compilers = ">=1.7.0,<2"
 cmake = "*"
@@ -28,9 +31,14 @@ no-build-isolation = ["lightgbm"]
 [feature.build.pypi-dependencies]
 lightgbm = { path = "./LightGBM/lightgbm-python", editable = true }
 
+[feature.tests.dependencies]
+pytest = "*"
+pytest-cov = "*"
+
 [feature.build.tasks]
 build-lightgbm = { cmd = "cmake -B build -S . && cmake --build build -j8" }
 build-lightgbm-python = { cmd = "./build-python.sh", depends-on = ["build-lightgbm"] }
 
 [environments]
-dev = ["build"]
+tests = ["tests"]
+dev = ["build", "tests"]
