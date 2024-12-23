@@ -11,21 +11,29 @@ python = ">=3.9,<4"
 diskcache = "*"
 fastapi = "*"
 plotly = ">=5,<6"
+pyarrow = "*"
 rich = "*"
-skops = "*"
-scikit-learn = "*"
+scikit-learn = "<1.7"
 uvicorn = "*"
 
 [pypi-dependencies]
+skops = "*"
 skore = { path = "./skore/skore", editable = true }
 
 [feature.build.dependencies]
 hatch = "*"
 
+[feature.build.tasks]
+clean-skore-ui = { cmd = "rm -rf skore-ui/dist && rm -rf src/skore/ui/static", cwd = "skore" }
+build-skore-ui = { cmd = "npm install && npm run build", cwd = "skore/skore-ui" , depends-on = ["clean-skore-ui"]}
+move-skore-ui = { cmd = "mv skore-ui/dist/ skore/src/skore/ui/static", cwd = "skore" , depends-on = ["build-skore-ui"]}
+
 [feature.dev.dependencies]
 ipykernel = "*"
 ipython = "*"
 jupyterlab = "*"
+pre-commit = "*"
+ruff = "*"
 
 [feature.tests.dependencies]
 altair = ">=5,<6"
@@ -33,11 +41,12 @@ httpx = "*"
 matplotlib = "*"
 pandas = "*"
 pillow = "*"
-polars = "*"
 plotly = "*"
+polars = "*"
 pre-commit = "*"
 pytest = "*"
 pytest-cov = "*"
+pytest-xdist = "*"
 pytest-order = "*"
 pytest-randomly = "*"
 ruff = "*"
@@ -52,9 +61,9 @@ altair = "*"
 matplotlib = "*"
 numpydoc = "*"
 pandas = "*"
+polars = "*"
 python-kaleido = "*"
 pydata-sphinx-theme = "*"
-scikit-learn = "*"
 sphinx = "*"
 sphinx-design = "*"
 sphinx-gallery = "*"
