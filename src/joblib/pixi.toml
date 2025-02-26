@@ -1,0 +1,35 @@
+[project]
+authors = ["Gael Varoquaux <gael.varoquaux@normalesup.org>"]
+channels = ["conda-forge"]
+description = "Lightweight pipelining with Python functions"
+name = "joblib"
+platforms = ["osx-arm64"]
+version = "1.3.2"
+
+[dependencies]
+python = ">=3.8"
+
+[pypi-dependencies]
+joblib = { path = "./joblib", editable = true }
+
+[feature.dev.dependencies]
+ipykernel = "*"
+ipython = "*"
+jupyterlab = "*"
+
+[feature.tests.dependencies]
+pytest = "*"
+pytest-asyncio = "*"
+pytest-cov = "*"
+pytest-timeout = "*"
+threadpoolctl = "*"
+
+[feature.docs.dependencies]
+numpydoc = "*"
+sphinx = "*"
+sphinx-gallery = "*"
+
+[environments]
+tests = ["tests"]
+docs = ["docs"]
+dev = ["dev", "docs", "tests"]
